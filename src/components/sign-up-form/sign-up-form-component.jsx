@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, UserContext } from "react";
 
 
 import FormInput from "../form-input/form-input.component";
@@ -7,6 +7,8 @@ import Button from "../button/button.component";
 
 import { createAuthUserWithEmailAndPassword, createUserDocumentFromAuth } from "../../utils/firebase/firebase.utils";
 import { Form } from "react-router-dom";
+
+// import { UserContext } from "../../contexts/user.context";
 
 
 import "./sign-up-form.styles.scss";
