@@ -19,20 +19,24 @@ const Navigation = () => {
       <div className="navigation">
 
         <Link className="logo-container" to="/">
-         <ElevateLogo className="logo"/>
+          <ElevateLogo className="logo" />
         </Link>
 
-       <div className="nav-links-container">
-        <Link className="nav-link" to="/shop">
-          SHOP
-        </Link>
-        <Link className="nav-link" to="/auth">
-          SIGN IN
-        </Link>
-
-       </div>
+        <div className="nav-links-container">
+          <Link className="nav-link" to="/shop">
+            SHOP
+          </Link>
+          {
+            currentUser ? (
+              <span className="nav-link"> SIGN OUT</span>)
+              : (
+                <Link className="nav-link" to="/auth">
+                  SIGN IN
+                </Link>
+              )}
+        </div>
       </div>
-      <Outlet/>
+      <Outlet />
     </Fragment>
   );
 };
