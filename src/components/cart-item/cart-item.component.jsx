@@ -1,5 +1,5 @@
 
-import './cart-item.styles.scsss';
+import './cart-item.styles.scss';
 
 
 const CartItem = ({ cartItem }) => {
